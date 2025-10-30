@@ -225,6 +225,7 @@ public class MapperBuilderAssistant extends BaseBuilder {
     }
 
     MappedStatement statement = statementBuilder.build();
+    // 这里将select语句转换成MappedStatement存放在configuration中
     configuration.addMappedStatement(statement);
     return statement;
   }

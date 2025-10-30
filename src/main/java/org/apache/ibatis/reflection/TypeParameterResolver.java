@@ -28,7 +28,8 @@ import java.util.Objects;
 
 /**
  * @author Iwao AVE!
- * @author Vladimir Sitnikov
+ * @author Vladimir Sitnikov 一个工具类，提供了一系列静态方法来解析指定类中的字段、方法返回值或方法参数的类型
+ *         当存在复杂的继承关系以及泛型定义时，TypeParameterResolver可以帮助我们解析字段、方法参数或方法返回值的类型，这是前面介绍的Reflector类的基础。
  */
 public class TypeParameterResolver {
 

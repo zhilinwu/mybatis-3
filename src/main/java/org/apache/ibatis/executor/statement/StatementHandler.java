@@ -26,7 +26,8 @@ import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.session.ResultHandler;
 
 /**
- * @author Clinton Begin
+ * @author Clinton Begin StatementHandler首先通过ParameterHandler完成SQL语句的实参绑定，然后通过java.sql.Statement对象执行SQL语句并得到结果集，
+ *         最后通过ResultSetHandler完成结果集的映射，得到结果对象并返回
  */
 public interface StatementHandler {
 

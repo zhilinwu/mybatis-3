@@ -20,7 +20,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author Clinton Begin
- * @author Eduardo Macarron
+ * @author Eduardo Macarron mybatis的日志适配器工厂
  */
 public final class LogFactory {
 
@@ -30,9 +30,11 @@ public final class LogFactory {
   public static final String MARKER = "MYBATIS";
 
   private static final ReentrantLock lock = new ReentrantLock();
+  // 封装具体的logger实例构造器
   private static Constructor<? extends Log> logConstructor;
 
   static {
+    // 依次实例化日志实现类
     tryImplementation(LogFactory::useSlf4jLogging);
     tryImplementation(LogFactory::useCommonsLogging);
     tryImplementation(LogFactory::useLog4J2Logging);
@@ -94,6 +96,7 @@ public final class LogFactory {
   }
 
   private static void tryImplementation(Runnable runnable) {
+    // 入参为函数式接口，适配任意无参无返回方法引用
     if (logConstructor == null) {
       try {
         runnable.run();

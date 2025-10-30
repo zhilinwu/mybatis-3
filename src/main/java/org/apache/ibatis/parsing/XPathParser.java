@@ -122,6 +122,7 @@ public class XPathParser {
     this.document = createDocument(new InputSource(reader));
   }
 
+  // 初始化方法，在XMLConfigBuilder中调用，作为XMLConfigBuilder的属性注入
   public XPathParser(InputStream inputStream, boolean validation, Properties variables, EntityResolver entityResolver) {
     commonConstructor(validation, variables, entityResolver);
     this.document = createDocument(new InputSource(inputStream));
@@ -206,6 +207,9 @@ public class XPathParser {
     return xnodes;
   }
 
+  /**
+   * parser.evalNode("/configuration")
+   */
   public XNode evalNode(String expression) {
     return evalNode(document, expression);
   }

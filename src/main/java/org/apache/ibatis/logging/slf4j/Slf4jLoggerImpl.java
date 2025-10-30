@@ -19,7 +19,7 @@ import org.apache.ibatis.logging.Log;
 import org.slf4j.Logger;
 
 /**
- * @author Eduardo Macarron
+ * @author Eduardo Macarron slf4j适配器 实现mybatis Log接口，封装slf4j的logger，将mybatis Log的操作交给slf4j的logger处理
  */
 class Slf4jLoggerImpl implements Log {
 

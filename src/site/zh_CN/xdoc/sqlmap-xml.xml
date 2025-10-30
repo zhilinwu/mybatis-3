@@ -1250,7 +1250,7 @@ public class UserRole {
 </resultMap>
 ]]></source>
 
-<p>MyBatis needs to be explicitly told that the results have been ordered in such a way, that when a new main row is retrieved from the result set, no previous row results will be retrieved again. This can be set on the statement with the <code>resultOrdered</code> attribute:</p>
+<p>MyBatis needs to be explicitly told that the results have been ordered in such a way, that when a new org.apache.ibatis.chris.Main row is retrieved from the result set, no previous row results will be retrieved again. This can be set on the statement with the <code>resultOrdered</code> attribute:</p>
 
 <source><![CDATA[<select id="getAllUsers" resultMap="userResultMap" resultOrdered="true">
     select

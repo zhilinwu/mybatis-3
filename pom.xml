@@ -36,7 +36,7 @@
     applications. MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or
     annotations. Simplicity is the biggest advantage of the MyBatis data mapper over object relational mapping
     tools.</description>
-  <url>https://www.mybatis.org/mybatis-3/</url>
+<!--  <url>https://www.mybatis.org/mybatis-3/</url>-->
 
   <inceptionYear>2009</inceptionYear>
 
@@ -203,7 +203,7 @@
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
       <version>9.4.0</version>
-      <scope>test</scope>
+<!--      <scope>test</scope>-->
     </dependency>
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
@@ -433,23 +433,23 @@
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>com.rudikershaw.gitbuildhook</groupId>
-        <artifactId>git-build-hook-maven-plugin</artifactId>
-        <version>${git-build-hook.version}</version>
-        <configuration>
-          <installHooks>
-            <pre-commit>hooks/pre-commit.sh</pre-commit>
-          </installHooks>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>install</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.rudikershaw.gitbuildhook</groupId>-->
+<!--        <artifactId>git-build-hook-maven-plugin</artifactId>-->
+<!--        <version>${git-build-hook.version}</version>-->
+<!--        <configuration>-->
+<!--          <installHooks>-->
+<!--            <pre-commit>hooks/pre-commit.sh</pre-commit>-->
+<!--          </installHooks>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>install</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 
@@ -506,5 +506,18 @@
       </build>
     </profile>
   </profiles>
+
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
 </project>

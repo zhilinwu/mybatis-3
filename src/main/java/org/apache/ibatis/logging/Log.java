@@ -16,7 +16,7 @@
 package org.apache.ibatis.logging;
 
 /**
- * @author Clinton Begin
+ * @author Clinton Begin 抽象mybatis自己的日志接口，提供统一的API入口
  */
 public interface Log {
 

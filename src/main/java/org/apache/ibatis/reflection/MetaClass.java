@@ -25,7 +25,7 @@ import org.apache.ibatis.reflection.invoker.Invoker;
 import org.apache.ibatis.reflection.property.PropertyTokenizer;
 
 /**
- * @author Clinton Begin
+ * @author Clinton Begin MetaClass通过Reflector和PropertyTokenizer组合使用，实现了对复杂的属性表达式的解析，并实现了获取指定属性描述信息的功能
  */
 public class MetaClass {
 
